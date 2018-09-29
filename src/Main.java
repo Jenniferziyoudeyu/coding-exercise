@@ -7,6 +7,12 @@ public class Main {
         for (int i = 0; i < thisIsReturnValue.length; i++) {
             System.out.print(thisIsReturnValue[i] + ",");
         }
+        QuickSort text = new QuickSort();
+        int[] QSarray = {3,5,2,7,8,0,1};
+        int[] returnValue = text.quickSort(QSarray);
+        for(int i = 0; i < array.length; i++) {
+            System.out.print(returnValue[i] + ",");
+        }
 
 //        int num1 = 1, num2 = 1;
 //        int addResult = add(num1, num2);

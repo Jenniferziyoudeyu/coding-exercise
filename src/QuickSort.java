@@ -14,27 +14,27 @@ public class QuickSort {
      * What if the given array is of length zero? In this case, we do not need to do anything.
      */
     public int[] quickSort(int[] array) {
-        // Write your solution here
+        quickSortHelper(array,0, array.length - 1);
         return array;
     }
     private void quickSortHelper (int[] array, int start1, int end1) {
         if (start1 >= end1) return;
         int pivotIndex = findPivotIndex(array,start1,end1);
-        quickSortHelper(array, 0,pivotIndex - 1);
+        quickSortHelper(array, start1,pivotIndex - 1);
         quickSortHelper(array, pivotIndex + 1, end1);
 
     }
 
     private int findPivotIndex (int[] array, int start2, int end2) {
-        if (start2 >= end2) return -1;
         int pivot = array[end2];
         int index = start2;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = start2; i < end2; i++) {
             if (array[i] < pivot) {
                 swap (array, i, index);
                 index++;
             }
         }
+        swap(array, end2, index);
         return index;
 
     }

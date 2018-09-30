@@ -1,14 +1,16 @@
+import class1_sort.MergeSort;
+
 public class Main {
 
     public static void main(String[] args) {
 //        int[] array = {5,3,7,1,8,2};
 
-//        SelectionSort textCase = new SelectionSort();
+//        class1_sort.SelectionSort textCase = new class1_sort.SelectionSort();
 //        int[] thisIsReturnValue = textCase.solve(array);
 //        for (int i = 0; i < thisIsReturnValue.length; i++) {
 //            System.out.print(thisIsReturnValue[i] + ",");
 //        }
-//        QuickSort testQuickSort = new QuickSort();
+//        class1_sort.QuickSort testQuickSort = new class1_sort.QuickSort();
   //      int[] Qsarray = {3,5,2,7,8,0,1};
     //    int[] returnValue = testQuickSort.quickSort(Qsarray);
 //        for(int i = 0; i < returnValue.length; i++) {

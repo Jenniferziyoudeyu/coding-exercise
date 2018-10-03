@@ -1,6 +1,6 @@
 package class2_recursion_binarysearch;
 
-public class findLastOccurrentceIndex {
+public class FindLastOccurrenceIndex {
     public int findLastTargetIndex (int[] array, int target) {
         int left = 0, right = array.length - 1;
         int mid = left + (right - left) / 2;

@@ -12,7 +12,7 @@ A[9]   1  3  5  5  5  5  5  5  5
 3.不断缩小成1/2的范围
  */
 
-public class findFirstOccurrenceIndex {
+public class FindFirstOccurrenceIndex {
     public int findFirstIndex (int[] array, int target){
         int left = 0;
         int right = array.length - 1;

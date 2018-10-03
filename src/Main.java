@@ -1,4 +1,5 @@
 import class1_sort.MergeSort;
+import class2_recursion_binarysearch.FindClosestKElement;
 
 public class Main {
 
@@ -18,12 +19,21 @@ public class Main {
 //        }
     //    }
 
-        MergeSort testMergeSort = new MergeSort();
-        int[] mergeSortArray = {5,3,7,1,8,2};
-        int[] mergeSortReturnValue = testMergeSort.mergeSort(mergeSortArray);
-        for (int j = 0; j < mergeSortReturnValue.length; j++) {
-            System.out.print(mergeSortArray[j] + ",");
+//        MergeSort testMergeSort = new MergeSort();
+//        int[] mergeSortArray = {5,3,7,1,8,2};
+//        int[] mergeSortReturnValue = testMergeSort.mergeSort(mergeSortArray);
+//        for (int j = 0; j < mergeSortReturnValue.length; j++) {
+//            System.out.print(mergeSortArray[j] + ",");
+//        }
+
+        FindClosestKElement closestKElement = new FindClosestKElement();
+        int[] kArray = {1,4,4,5,5,6,6,6,6,7,7,9};
+        int count = 5;
+        int[] kClosestElement = closestKElement.findClosetKelement(kArray,7,count);
+        for (int i = 0; i < kClosestElement.length; i++) {
+            System.out.print(kClosestElement[i] + ",");
         }
+
 
 
 //        int num1 = 1, num2 = 1;

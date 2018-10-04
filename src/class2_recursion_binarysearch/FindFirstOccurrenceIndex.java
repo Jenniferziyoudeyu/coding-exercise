@@ -16,7 +16,6 @@ public class FindFirstOccurrenceIndex {
     public int findFirstIndex (int[] array, int target){
         int left = 0;
         int right = array.length - 1;
-        int mid = left + (right - left)/2;
         //最后要剩下两个数 所以left ！= right;  <=的情况是要找具体target数的时候
         //这个题 找到的target不一定是第一个出现的数，所以要一直找到两个相邻的数
         //在这个例子中，最后剩下3 5 或者 5 5 的情况，返回等于target的index
@@ -30,7 +29,7 @@ public class FindFirstOccurrenceIndex {
          与l重合了
           */
         while (left < right - 1) {
-            mid = left + (right - left) / 2;
+            int mid = left + (right - left) / 2;
             if (array[mid] == target) {
                 right = mid; //不要停 继续向左check。与找最右边target不同：找最左边target的时候把找到的target作为最右边的点
             } else if (array[mid] < target) {

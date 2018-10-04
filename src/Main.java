@@ -1,5 +1,6 @@
 import class1_sort.MergeSort;
 import class2_recursion_binarysearch.FindClosestKElement;
+import class2_recursion_binarysearch.FindFirstOccurrenceIndex;
 
 public class Main {
 
@@ -26,13 +27,18 @@ public class Main {
 //            System.out.print(mergeSortArray[j] + ",");
 //        }
 
-        FindClosestKElement closestKElement = new FindClosestKElement();
-        int[] kArray = {1,4,4,5,5,6,6,6,6,7,7,9};
-        int count = 5;
-        int[] kClosestElement = closestKElement.findClosetKelement(kArray,7,count);
-        for (int i = 0; i < kClosestElement.length; i++) {
-            System.out.print(kClosestElement[i] + ",");
-        }
+//        FindClosestKElement closestKElement = new FindClosestKElement();
+//        int[] kArray = {1,4,4,5,5,6,6,6,6,7,7,9};
+//        int count = 5;
+//        int[] kClosestElement = closestKElement.findClosetKelement(kArray,7,count);
+//        for (int i = 0; i < kClosestElement.length; i++) {
+//            System.out.print(kClosestElement[i] + ",");
+//        }
+
+        FindFirstOccurrenceIndex firstOccurrenceIndex = new FindFirstOccurrenceIndex();
+        int[] firstOccurArray = {1,2,4,5,6,6,6,6,6,7};
+        int firstOccurIndex = firstOccurrenceIndex.findFirstIndex(firstOccurArray,6);
+        System.out.println(firstOccurIndex);
 
 
 

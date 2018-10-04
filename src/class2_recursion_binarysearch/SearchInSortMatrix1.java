@@ -1,6 +1,6 @@
 package class2_recursion_binarysearch;
 
-public class TwoD_Space {
+public class SearchInSortMatrix1 {
     /*
     Apple binary search in 2D space
     Variant(变种)1.0 application： 2D matrix, sorted on each row, first element

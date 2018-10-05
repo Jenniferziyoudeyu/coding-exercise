@@ -13,6 +13,7 @@ e.g.  int a[5] = {1,2,3,7,9}
 public class FindClosestKElement {
 
     public int[] findClosetKelement (int[] array, int target , int k) {
+        if (array == null || array.length == 0) return new int[]{};
         int left = 0, right = array.length - 1;
         while (left < right - 1) {
             int mid = left + (right - left) / 2;
@@ -34,6 +35,7 @@ public class FindClosestKElement {
             } else {
                 res[i] = array[right++];
             }
+
         }
         return res;
 

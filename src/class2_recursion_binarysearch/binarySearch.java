@@ -27,7 +27,7 @@ public class binarySearch {
         return -1;
     }
 
-    public int find_the_closest_element_to_target(int[] array, int left, int right, int target){
+    public int findTheClosestElementToTarget(int[] array, int left, int right, int target){
         int mid;
         //left = right - 1 的时候 是两个相邻的数，就停下来。target在两个数字之间 <的时候说明两个数之间还有数 不相邻
         while (left < right - 1) {

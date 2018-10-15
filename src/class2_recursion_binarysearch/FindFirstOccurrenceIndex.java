@@ -14,6 +14,7 @@ A[9]   1  3  5  5  5  5  5  5  5
 
 public class FindFirstOccurrenceIndex {
     public int findFirstIndex (int[] array, int target){
+        if (array == null || array.length == 0) return 0;
         int left = 0;
         int right = array.length - 1;
         //最后要剩下两个数 所以left ！= right;  <=的情况是要找具体target数的时候

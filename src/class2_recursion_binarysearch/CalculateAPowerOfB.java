@@ -31,7 +31,11 @@ public class CalculateAPowerOfB {
                       /
                     a*a*a
          */
-        return a * CalculateAPowerOfB(a , b - 1); // recursion rule 每次调用自己 一直到 b-1 = 0
+        return CalculateAPowerOfB(a , b - 1);//一直到 b == 0停止，触底反弹，一级一级得到计算结果
+        //34行可以分解成35-37行，触底反弹的过程
+//        int popupVal =  CalculateAPowerOfB(a , b - 1); // recursion rule 每次调用自己 一直到 b-1 = 0
+//        int returnVal =  a * popupVal;
+//        return returnVal;
     }
     /*
     解法2
@@ -56,9 +60,9 @@ public class CalculateAPowerOfB {
 
      */
 
-    public int a_pow_b(int a, int b) {
+    public int aPowB(int a, int b) {
         if (b == 0) return 1;
-        int temp = a_pow_b(a, b/2);
+        int temp = aPowB(a, b/2);
         if (b % 2 ==0) {
             return temp * temp;
         }else {

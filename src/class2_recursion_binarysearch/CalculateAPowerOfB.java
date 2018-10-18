@@ -69,4 +69,5 @@ public class CalculateAPowerOfB {
             return temp * temp * a;
         }
     }
+
 }

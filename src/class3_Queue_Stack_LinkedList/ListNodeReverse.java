@@ -4,19 +4,21 @@ import javax.xml.soap.Node;
 import java.util.List;
 
 public class ListNodeReverse {
-//    //recursion 方法
-//    public Node ReverseList (ListNode head) {
-//
-//        if (head == null || head.next == null) {
-//            return head;
-//        }
-//    }
-//}
-//
-//class ListNode {
-//    int val;
-//    ListNode next;
-//    ListNode (int val) {
-//        this.val = val;
-//    }
+    //recursion 方法
+    public Node ReverseList (ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
+        if(head != null && head.next != null && head.next.next == null) {
+            head.next.next = head;
+        }
+    }
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode (int val) {
+        this.val = val;
+    }
 }

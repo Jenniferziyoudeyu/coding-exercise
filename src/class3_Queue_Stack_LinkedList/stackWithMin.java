@@ -22,7 +22,9 @@ public class stackWithMin {
     }
 
     public int pop() {
-        if (!stack2.isEmpty()) stack2.pop();
+        if (!stack2.isEmpty()) {
+            stack2.pop();
+        }
         return stack1.isEmpty() ? -1 : stack1.pop();
 
     }
@@ -33,7 +35,7 @@ public class stackWithMin {
         stack1.push(element);
     }
 
-    public int top() {
+    public int top(int elm) {
         return stack1.isEmpty() ? -1 : stack1.peek();
     }
 

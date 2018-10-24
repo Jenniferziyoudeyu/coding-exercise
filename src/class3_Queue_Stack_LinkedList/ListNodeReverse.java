@@ -22,7 +22,7 @@ public class ListNodeReverse {
         }
         return prev;
     }
-
+    // recursion方法
     public ListNode reverse(ListNode head) {
         if (head == null || head.next == null) {
             return head;

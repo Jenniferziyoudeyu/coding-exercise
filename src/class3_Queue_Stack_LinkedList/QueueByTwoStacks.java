@@ -18,80 +18,44 @@ public class QueueByTwoStacks {
      * size() should return the number of elements buffered in the queue.
      * isEmpty() should return true if there is no element buffered in the queue, false otherwise.
      */
-//    public class Solution {
-//
-//        Stack<Integer> stack1;
-//        Stack<Integer> stack2;
-//
-//        public Solution() {
-//            this.stack1 = new Stack<>();
-//            this.stack2 = new Stack<>();
-//        }
-//
-//        public Integer poll() {
-//            pushAllToStack2();
-//            return stack2.isEmpty() ? 0 : stack2.pop();
-//        }
-//
-//        public void offer(int element) {
-//            stack1.push(element);
-//        }
-//
-//        public Integer peek() {
-//            pushAllToStack2();
-//            return stack2.isEmpty() ? 0 : stack2.peek();
-//        }
-//
-//        public int size() {
-//            return stack1.size() + stack2.size();
-//        }
-//
-//        public boolean isEmpty() {
-//            return stack1.isEmpty() && stack2.isEmpty();
-//        }
-//
-//        private void pushAllToStack2() {
-//            if (stack2.isEmpty()) {
-//                while (!stack1.isEmpty()) {
-//                    stack2.push(stack1.pop());
-//                }
-//            }
-//        }
-//    }
-    Stack<Integer> stack1;
-    Stack<Integer> stack2;
-    public QueueByTwoStacks() {
-        this.stack1 = new Stack<>();
-        this.stack2 = new Stack<>();
-    }
+    public class Solution {
 
-    public Integer poll() {
-        pushAllTOStack2();
-        return stack2.isEmpty() ? 0 : stack2.pop();
-    }
+        Stack<Integer> stack1;
+        Stack<Integer> stack2;
 
-    public void offer(int element) {
-        stack1.push(element);
+        public Solution() {
+            this.stack1 = new Stack<>();
+            this.stack2 = new Stack<>();
+        }
 
-    }
+        public Integer poll() {
+            pushAllToStack2();
+            return stack2.isEmpty() ? null : stack2.pop();
+        }
 
-    public Integer peek() {
-        pushAllTOStack2();
-        return stack2.isEmpty() ? 0 : stack2.pop();
-    }
+        public void offer(int element) {
+            stack1.push(element);
+        }
 
-    public int size() {
-        return stack1.size() + stack2.size();
-    }
+        public Integer peek() {
+            pushAllToStack2();
+            return stack2.isEmpty() ? null : stack2.peek();
+        }
 
-    public boolean isEmpty() {
-        return stack1.isEmpty() && stack2.isEmpty();
-    }
-    private void pushAllTOStack2() {
-       if (stack2.isEmpty()) {
-           while (!stack1.isEmpty()) {
-               stack2.push(stack1.pop());
-           }
+        public int size() {
+            return stack1.size() + stack2.size();
+        }
+
+        public boolean isEmpty() {
+            return stack1.isEmpty() && stack2.isEmpty();
+        }
+
+        private void pushAllToStack2() {
+            if (stack2.isEmpty()) {
+                while (!stack1.isEmpty()) {
+                    stack2.push(stack1.pop());
+                }
+            }
         }
     }
 }

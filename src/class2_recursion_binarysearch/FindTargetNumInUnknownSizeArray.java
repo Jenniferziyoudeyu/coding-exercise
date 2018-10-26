@@ -1,4 +1,22 @@
 package class2_recursion_binarysearch;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Description
+ * Given a integer dictionary A of unknown size, where the numbers in the dictionary are sorted in ascending order, determine if a given target integer T is in the dictionary. Return the index of T in A, return -1 if T is not in A.
+ *
+ * Assumptions
+ *
+ * dictionary A is not null
+ * dictionary.get(i) will return null(Java)/INT_MIN(C++)/None(Python) if index i is out of bounds
+ * Examples
+ *
+ * A = {1, 2, 5, 9, ......}, T = 5, return 2
+ * A = {1, 2, 5, 9, 12, ......}, T = 7, return -1
+ *
+ */
 /*
 Given a sorted dictionary with unknown size, how to determine whether a word is in this dictionary or not
 在没有右边界的数组里找有没有target
@@ -31,14 +49,28 @@ Time = log_2(10n);
 
 public class FindTargetNumInUnknownSizeArray {
 
-    void func1(int a) {
-        System.out.print(a);
+    public int search(Dictionary dict, int target) {
+        if (dict == null) return -1;
+        int left = 0; int right = 1;
+        while (target > dict.get(right)) {  //两个数字的比较
+            left = right;
+            right *= 2;
+        }
+        while (left <= right) {            //确定了target所在的范围，比较角标。
+            int mid = left + (right - left)/2;
+            if (target == dict.get(mid)) return mid;
+            else if (target > dict.get(mid)) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+        return -1;
     }
 
-    void func2(int b) {
-        func1(10);
 
-    }
+}
 
-
+interface Dictionary {
+    public Integer get(int index); // 模仿一个没有边界的array。
 }

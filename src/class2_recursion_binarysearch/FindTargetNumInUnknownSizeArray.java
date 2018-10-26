@@ -67,8 +67,6 @@ public class FindTargetNumInUnknownSizeArray {
         }
         return -1;
     }
-
-
 }
 
 interface Dictionary {

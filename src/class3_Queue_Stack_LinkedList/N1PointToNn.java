@@ -9,11 +9,12 @@ package class3_Queue_Stack_LinkedList;
 
 public class N1PointToNn {
     public ListNode firstPointToLast (ListNode head) {
+        //corner case
         if (head == null) return head;
+        //保存头结点，前部分head（dummy）要向后移动，所以设置res停在最初位置
         ListNode dummy = new ListNode(0),
                 res = dummy;
         ListNode dummy2 = new ListNode(0),
-                dummy2Copy = dummy2;
         dummy.next = head;
         ListNode fast = head;
         ListNode slow = head;
@@ -21,12 +22,12 @@ public class N1PointToNn {
             fast = fast.next.next;
             slow = slow.next;
         }
-        dummy2Copy.next = slow;
+        dummy2.next = slow;
         slow.next = null;
         //reverse
-        ListNode pre = dummy2Copy;
-        ListNode reverseHead = dummy2Copy.next;
-        while (dummy2Copy.next != null) {
+        ListNode pre = dummy2;
+        ListNode reverseHead = dummy2.next;
+        while (reverseHead.next != null) {
             ListNode next = reverseHead.next;
             reverseHead.next = pre;
             reverseHead = next;

@@ -20,6 +20,7 @@ public class InsertInSortedLinkedList {
     public ListNode insert(ListNode head, int value) {
       ListNode dummy = new ListNode(0);
       ListNode pre = dummy;
+      dummy.next = head;
       while (head != null && head.value < value) {
           pre = head;
           head = head.next;

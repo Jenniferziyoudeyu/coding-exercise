@@ -41,12 +41,6 @@ package class2_recursion_binarysearch;
     Step 2: 确定了target所在列数,再在n行里找target所在的列 O(log(m))
     Time = O(log(m) + log(n)) = O(log(mn))
      */
-     /*
-    method 2
-    从左下角的9开始往上往右同时找
-    Walk linearly from bottom left to top right
-    Time = O(m + n)
-     */
 
 /*
 method 3 run binary search only once

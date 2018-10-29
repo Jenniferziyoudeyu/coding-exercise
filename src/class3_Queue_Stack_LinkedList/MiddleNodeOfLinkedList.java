@@ -19,6 +19,7 @@ public class MiddleNodeOfLinkedList {
     public ListNode middleNode(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
+        //fast.next.next != null的话，可以求出靠前一个的middle node
         while (fast != null && fast.next != null && fast.next.next != null) {
             fast = fast.next.next;
             slow = slow.next;

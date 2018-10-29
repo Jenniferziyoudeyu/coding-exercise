@@ -9,8 +9,8 @@ package class3_Queue_Stack_LinkedList;
 public class CheckIfLinkedListHasACycle {
     public boolean hasCycle(ListNode head) {
         if (head == null) return false;
-        ListNode fast = head;
-        ListNode slow = head.next;
+        ListNode fast = head.next;
+        ListNode slow = head;
         while (fast != null && fast.next != null && fast != slow) {
             fast = fast.next.next;
             slow = slow.next;

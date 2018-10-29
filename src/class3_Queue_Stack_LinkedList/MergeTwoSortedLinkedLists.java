@@ -33,4 +33,26 @@ public class MergeTwoSortedLinkedLists {
         if (two != null) cur.next = two;
         return dummy.next;
     }
+
+    public ListNode merge2(ListNode one, ListNode two) {
+        if (one == null && two == null) return null;
+        else if (one == null) return two;
+        else if (two == null) return one;
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        while (one != null || two != null){
+            int val1 = one == null ? Integer.MAX_VALUE : one.value;
+            int val2 = two == null ? Integer.MAX_VALUE : two.value;
+            if (val1 <= val2) {
+                dummy.next = one;
+                one = one.next;
+            } else {
+                dummy.next = two;
+                two = two.next;
+            }
+            dummy = dummy.next;
+        }
+        return dummy.next;
+    }
+
 }

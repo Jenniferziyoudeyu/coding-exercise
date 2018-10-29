@@ -14,7 +14,7 @@ public class N1PointToNn {
         //保存头结点，前部分head（dummy）要向后移动，所以设置res停在最初位置
         ListNode dummy = new ListNode(0),
                 res = dummy;
-        ListNode dummy2 = new ListNode(0),
+        ListNode dummy2 = new ListNode(0);
         dummy.next = head;
         ListNode fast = head;
         ListNode slow = head;

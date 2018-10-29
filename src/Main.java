@@ -1,6 +1,9 @@
 import class1_sort.MergeSort;
 import class2_recursion_binarysearch.FindClosestKElement;
 import class2_recursion_binarysearch.FindFirstOccurrenceIndex;
+import class3_Queue_Stack_LinkedList.ListNode;
+import class3_Queue_Stack_LinkedList.N1PointToNn;
+import com.sun.xml.internal.bind.v2.TODO;
 
 public class Main {
 
@@ -35,12 +38,26 @@ public class Main {
 //            System.out.print(kClosestElement[i] + ",");
 //        }
 
-        FindFirstOccurrenceIndex firstOccurrenceIndex = new FindFirstOccurrenceIndex();
-        int[] firstOccurArray = {1,2,4,5,6,6,6,6,6,7};
-        int firstOccurIndex = firstOccurrenceIndex.findFirstIndex(firstOccurArray,6);
-        System.out.println(firstOccurIndex);
+//        FindFirstOccurrenceIndex firstOccurrenceIndex = new FindFirstOccurrenceIndex();
+//        int[] firstOccurArray = {1,2,4,5,6,6,6,6,6,7};
+//        int firstOccurIndex = firstOccurrenceIndex.findFirstIndex(firstOccurArray,6);
+//        System.out.println(firstOccurIndex);
 
+//        TODO：实现N1->Nn
+        N1PointToNn firstPointToLastTest = new N1PointToNn();
+        int[] arr =  {1,3,4,5,6,7,8,9};
+        ListNode expample = new ListNode(arr[0]);
+        ListNode cur = expample;
+        for (int i = 1; i < 7; i++) {
+            cur.next = new ListNode(arr[i]);
+            cur = cur.next;
+        }
+        ListNode res = firstPointToLastTest.firstPointToLast(cur);
+        for (int j = 0; j < 7; j++) {
 
+        }
+
+        System.out.print(res);
 
 //        int num1 = 1, num2 = 1;
 //        int addResult = add(num1, num2);

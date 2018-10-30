@@ -22,12 +22,5 @@ public class BinaryTreeTriverse {
         System.out.println(root.value);
     }
 }
-class TreeNode {
-    int value;
-    TreeNode left;
-    TreeNode right;
-    //构造体
-    TreeNode (int value) {
-        this.value = value;
-    }
-}
+
+

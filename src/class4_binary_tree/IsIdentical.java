@@ -1,6 +1,6 @@
 package class4_binary_tree;
 
-public class isIdentical {
+public class IsIdentical {
     boolean isIdentical (TreeNode n1, TreeNode n2) {
         if (n1 == null && n2 == null) return true;
         else if (n1 == null || n2 == null) return false;

@@ -1,6 +1,6 @@
 package class4_binary_tree;
 // 每个节点都要走一遍， 所以时间复杂度是O（n）。
-public class isSymmetic {
+public class IsSymmetic {
     boolean isSymmetic (TreeNode n1, TreeNode n2) {
         if (n1 == null && n2 == null) return true;          //base case 1
         else if (n2 == null || n2 == null) return false;    //base case 2

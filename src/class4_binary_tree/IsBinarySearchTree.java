@@ -10,9 +10,9 @@ package class4_binary_tree;
                         ...
  */
 
-public class isBinarySearchTree {
+public class IsBinarySearchTree {
     boolean isBST (TreeNode root, int min, int max) {
-        if (root == null) return false;
+        if (root == null) return true;
         if (root.value <= min || root.value >= max)
             return false;
 

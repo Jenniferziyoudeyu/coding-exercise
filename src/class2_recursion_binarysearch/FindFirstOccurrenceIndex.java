@@ -31,17 +31,19 @@ A[9]   1  3  5  5  5  5  5  5  5
 1.设置第一个数和最后一个数分别为 left 和 right
 2.找到中间值mid，比较mid 和 target 5的大小
 3.不断缩小成1/2的范围
+
+时间复杂度&空间复杂度
+while loop时间复杂度是1，recursion压栈上一层还在，层数logn，Time：logn，Space是(每层node加一起 1/2n + 1/4n+ 1/8n...) = O（n）
+时间复杂度（一共计算多少次层数*每一层做了多少次运算） 一共有logn层 每层是1， 所以Time = O（logn）
  */
 
-public class FindFirstOccurrenceIndex {
-    public int findFirstIndex (int[] array, int target){
-        if (array == null || array.length == 0) return 0;
-        int left = 0;
-        int right = array.length - 1;
-        //最后要剩下两个数 所以left ！= right;  <=的情况是要找具体target数的时候
-        //这个题 找到的target不一定是第一个出现的数，所以要一直找到两个相邻的数
-        //在这个例子中，最后剩下3 5 或者 5 5 的情况，返回等于target的index
-        /*
+
+/*
+        为什么while的条件是left < right - 1：
+        最后要剩下两个数 所以left ！= right;  <=的情况是要找具体target数的时候
+        这个题 找到的target不一定是第一个出现的数，所以要一直找到两个相邻的数
+        在这个例子中，最后剩下3 5 或者 5 5 的情况，返回等于target的index
+
          为什么是(r - 1):之后代码 r = mid 或者 l = mid的时候，
          进行新一轮 while loop
          比如 l = 3； r = 4
@@ -50,6 +52,11 @@ public class FindFirstOccurrenceIndex {
          mid = 3 +1/2 = 3
          与l重合了
           */
+public class FindFirstOccurrenceIndex {
+    public int findFirstIndex (int[] array, int target){
+        if (array == null || array.length == 0) return 0;
+        int left = 0;
+        int right = array.length - 1;
         while (left < right - 1) {
             int mid = left + (right - left) / 2;
             if (array[mid] == target) {
@@ -61,7 +68,7 @@ public class FindFirstOccurrenceIndex {
                 right = mid; //因为 mid ！= target，所以下次计算直接从下一位开始也可以。所以也可以写成left = mid - 1.
             }
             /*
-            上面的55-62行也可以写成
+            上面的while里面也可以写成
             if (array[mid] < target) {
                 left = mid;
             } else  {

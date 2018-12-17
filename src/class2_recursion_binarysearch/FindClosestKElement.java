@@ -17,7 +17,7 @@ package class2_recursion_binarysearch;
  */
 
 /*
-how to find closest k element in the array that is closest to a tartget number
+how to find closest k element in the array that is closest to a target number
 找数组里k个离target最近的数字
 step 1 先找到离target最近的两个数 find the 1st closest element
 step 2 此时数组分成两部分，找到k个离target最近的即可

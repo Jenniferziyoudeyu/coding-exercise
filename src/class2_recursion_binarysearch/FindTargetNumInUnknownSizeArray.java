@@ -67,7 +67,10 @@ public class FindTargetNumInUnknownSizeArray {
         }
         return -1;
     }
+
+
 }
+
 
 interface Dictionary {
     public Integer get(int index); // 模仿一个没有边界的array。

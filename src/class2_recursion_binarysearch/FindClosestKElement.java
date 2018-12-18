@@ -21,10 +21,16 @@ how to find closest k element in the array that is closest to a target number
 找数组里k个离target最近的数字
 step 1 先找到离target最近的两个数 find the 1st closest element
 step 2 此时数组分成两部分，找到k个离target最近的即可
+        最先考虑：k是否是负数， array长度小于k 如果满足 从binary search开始就不用做了
+       要注意左边和右边是否越界（左边或者右边没有index了），
 Target == 4          L=2 R=3 (target在3和7之间）
 
          Index    0 1 2 3 4
 e.g.  int a[5] = {1,2,3,7,9}
+
+空间复杂度是 left + right + mid + i = O（4） = O（1）
+时间复杂度 O（n）= logn + k
+
 
 
  */

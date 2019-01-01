@@ -8,9 +8,10 @@ import java.util.Stack;
 public class QueueByTwoStacks {
     /**
      * Description
-     * Java: Implement a queue by using two stacks. The queue should provide     size(), isEmpty(), offer(), poll() and peek() operations. When the queue is empty, poll() and peek() should return null.
+     * Java: Implement a queue by using two stacks. The queue should provide
+     * size(), isEmpty(), offer(), poll() and peek() operations.
+     * When the queue is empty, poll() and peek() should return null.
      *
-     * C++: Implement a queue by using two stacks. The queue should provide size(), isEmpty(), push(), front() and pop() operations. When the queue is empty, front() should return -1.
      *
      * Assumptions
      *

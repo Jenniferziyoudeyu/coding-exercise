@@ -29,6 +29,7 @@ public class QueueByTwoStacks {
             this.stack2 = new Stack<>();
         }
 
+        //poll 拿出来并有返回值
         public Integer poll() {
             pushAllToStack2();
             return stack2.isEmpty() ? null : stack2.pop();

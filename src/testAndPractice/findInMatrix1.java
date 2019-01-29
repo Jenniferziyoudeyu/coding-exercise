@@ -24,8 +24,6 @@ public class findInMatrix1 {
         if(matrix == null || matrix.length == 0 || matrix[0].length == 0) return new int[]{-1,-1};
         int row = matrix.length;
         int col = matrix[0].length;
-        String str = new String();
-        str.length();
         int left = 0;
         int right = row * col - 1;
         while(left <= right) {

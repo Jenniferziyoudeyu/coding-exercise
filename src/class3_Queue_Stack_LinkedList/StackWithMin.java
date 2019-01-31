@@ -2,7 +2,7 @@ package class3_Queue_Stack_LinkedList;
 
 import java.util.Stack;
 
-public class stackWithMin {
+public class StackWithMin {
     /**
      * Description
      * Enhance the stack implementation to support min() operation. min() should return the current minimum value in the stack. If the stack is empty, min() should return -1.
@@ -16,7 +16,7 @@ public class stackWithMin {
     Stack<Integer> stack1;
     Stack<Integer> stack2;
 
-    public stackWithMin() {
+    public StackWithMin() {
       this.stack1 = new Stack<>();
       this.stack2 = new Stack<>();
     }

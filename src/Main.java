@@ -1,9 +1,14 @@
 import class1_sort.MergeSort;
 import class2_recursion_binarysearch.FindClosestKElement;
 import class2_recursion_binarysearch.FindFirstOccurrenceIndex;
-import class3_Queue_Stack_LinkedList.ListNode;
+import class3_Queue_Stack_LinkedList.ListNodeReverse;
 import class3_Queue_Stack_LinkedList.N1PointToNn;
 import com.sun.xml.internal.bind.v2.TODO;
+import public_class.ListNode;
+import testAndPractice.LinkedListReverse;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -43,21 +48,41 @@ public class Main {
 //        int firstOccurIndex = firstOccurrenceIndex.findFirstIndex(firstOccurArray,6);
 //        System.out.println(firstOccurIndex);
 
+        //把输入值变成需要的input类型
+        ListNode head = new ListNode(0);
+        ListNode res = head;
+        int[] arr = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+        //把array里面的数一个一个变成ListNode
+        for (int i = 0; i < arr.length; i++) {
+            head.next = new ListNode(arr[i]);
+            head = head.next;
+        }
+        //初始化
+        LinkedListReverse reverseInstanceMemberObjct = new LinkedListReverse();
+//        LinkedListReverse.QNMD(); 如果在类中是静态方法static，就可以直接类名.方法名（）；
+        //返回类型+自定义名字 = 初始化对象.方法
+        ListNode reverseResultHead = reverseInstanceMemberObjct.reverse(res.next);
+        while (reverseResultHead != null) {
+            System.out.println(reverseResultHead.value);
+            reverseResultHead = reverseResultHead.next;
+        }
+
+
 //        TODO：实现N1->Nn
-        N1PointToNn firstPointToLastTest = new N1PointToNn();
-        int[] arr =  {1,3,4,5,6,7,8,9};
-        ListNode expample = new ListNode(arr[0]);
-        ListNode cur = expample;
-        for (int i = 1; i < 7; i++) {
-            cur.next = new ListNode(arr[i]);
-            cur = cur.next;
-        }
-        ListNode res = firstPointToLastTest.firstPointToLast(cur);
-        for (int j = 0; j < 7; j++) {
-
-        }
-
-        System.out.print(res);
+//        N1PointToNn firstPointToLastTest = new N1PointToNn();
+//        int[] arr =  {1,3,4,5,6,7,8,9};
+//        ListNode expample = new ListNode(arr[0]);
+//        ListNode cur = expample;
+//        for (int i = 1; i < 7; i++) {
+//            cur.next = new ListNode(arr[i]);
+//            cur = cur.next;
+//        }
+//        ListNode res = firstPointToLastTest.firstPointToLast(cur);
+//        for (int j = 0; j < 7; j++) {
+//
+//        }
+//
+//        System.out.print(res);
 
 //        int num1 = 1, num2 = 1;
 //        int addResult = add(num1, num2);

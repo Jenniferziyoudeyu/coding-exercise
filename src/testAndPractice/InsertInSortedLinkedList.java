@@ -11,12 +11,11 @@ L = 1 -> 3 -> 5 -> null, insert 3, return 1 -> 3 -> 3 -> 5 -> null
 L = 2 -> 3 -> null, insert 1, return 1 -> 2 -> 3 -> null
  */
 
-public class insertInSortedLinkedList {
+import public_class.ListNode;
 
+public class InsertInSortedLinkedList {
 
-
-
-    public ListNode insert(ListNode head, int value) {
+    public ListNode insertInSortedLinkedList(ListNode head, int value) {
         //corner case不需要写。因为没有它
 //        if (head == null) return new ListNode(value);
         ListNode res = head;

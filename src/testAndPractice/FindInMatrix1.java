@@ -16,7 +16,7 @@ target = 7, return {1, 2}
 
 target = 6, return {-1, -1} to represent the target number does not exist in the matrix.
  */
-public class findInMatrix1 {
+public class FindInMatrix1 {
     public int[] search(int[][] matrix, int target) {
         //.length是instance variable（成员变量）。可以被object运用的就是成员变量。与成员变量相对的是本地变量 只能在当前方法里面使用。
         //不用检查matrix[0] == null 因为 matrix.length不是0的话 第一行肯定不是null

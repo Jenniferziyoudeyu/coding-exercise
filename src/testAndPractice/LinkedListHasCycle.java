@@ -1,10 +1,11 @@
 package testAndPractice;
 
 import class1_array_sort.Array;
+import public_class.ListNode;
 
 import java.util.*;
 
-public class linkedListHasCycle {
+public class LinkedListHasCycle {
     public boolean hasCycleList(ListNode head) {
         if (head == null) return false;
         ListNode res = head;

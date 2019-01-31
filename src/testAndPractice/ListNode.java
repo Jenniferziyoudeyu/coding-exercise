@@ -1,13 +1,6 @@
 package testAndPractice;
 
-public class ListNode {
-    public int value;
-    public ListNode next;
-    public ListNode(int value) {
-        this.value = value;
-        next = null;
-    }
-}
+import class3_Queue_Stack_LinkedList.ListNode;
 
 class insert {
     ListNode insert(ListNode head, int value) {

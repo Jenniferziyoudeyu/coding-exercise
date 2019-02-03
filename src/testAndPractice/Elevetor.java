@@ -18,15 +18,15 @@ public class Elevetor {
         return true;
     }
 }
-
-class a extends Elevetor {
-    public a(boolean doorOpenStatus, boolean goUp, int speed, int maxWeight) {
-        super(doorOpenStatus, goUp, speed, maxWeight);
-    }
-
-    @Override
-    public boolean overWeight(int weight) {
-       boolean superRes = super.overWeight(weight);
-        return !superRes;
-    }
-}
+//
+//class a extends Elevetor {
+//    public a(boolean doorOpenStatus, boolean goUp, int speed, int maxWeight) {
+//        super(doorOpenStatus, goUp, speed, maxWeight);
+//    }
+//
+//    @Override
+//    public boolean overWeight(int weight) {
+//       boolean superRes = super.overWeight(weight);
+//        return !superRes;
+//    }
+//}

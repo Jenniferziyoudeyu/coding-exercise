@@ -1,4 +1,4 @@
-package testAndPractice;
+package oodDesign;
 
 public class Elevetor {
     public boolean status;

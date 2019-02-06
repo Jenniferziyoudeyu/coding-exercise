@@ -1,6 +1,4 @@
-package testAndPractice;
-
-import java.util.List;
+package oodDesign;
 
 public class Elevator {
     public Status status;
@@ -34,10 +32,12 @@ public class Elevator {
     }
 
     public int addWeight(int inputWeight) {
+
         return curWeight += inputWeight;
     }
 
     public int minusWeight(int inputWeight) {
+
         return curWeight -= inputWeight;
     }
 

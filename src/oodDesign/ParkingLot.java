@@ -8,32 +8,38 @@ public class ParkingLot {
         this.levels = levels;
     }
 
-    boolean park() {
-        for (int i = 0; i < levels.length; i++) {
-            if(levels[i] == null) {
-                return true;
-            }
-        } return false;
-    }
+//    boolean park() {
+//        for (int i = 0; i < levels.length; i++) {
+//            if(levels[i].) {
+//                return true;
+//            }
+//        } return false;
+//    }
+
 
 
 }
 
 class Level {
-    String id;
-    ParkingSpace[] spaces;
+    private String id;
+    private ParkingSpace[] spaces;
     Level(String id, ParkingSpace[] spaces) {
         this.id = id;
         this.spaces = spaces;
     }
+    //可以别的class得到level的id号码但是不能随意改变
+    public String getId() {
+        return id;
+    }
 
-    ParkingSpace searchASpace(Type type) {
+    boolean parking(Type type) {
         for (int i = 0; i < spaces.length; i++) {
             if (!spaces[i].isTaken && spaces[i].type == type) {
-                return spaces[i];
+                spaces[i].isTaken = true;
+                return true;
             }
         }
-        return null;
+        return false;
     }
 
 

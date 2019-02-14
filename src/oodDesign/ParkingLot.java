@@ -39,7 +39,7 @@ class Level {
 
     void leave(String number) {
         for (int i = 0; i < spaces.length; i++) {
-            if(spaces[i].number == number) {
+            if(spaces[i].number.equals(number)) {
                 spaces[i].isTaken = false;
             }
         }

@@ -1,5 +1,6 @@
 package oodDesign;
 
+
 public class Shelf {
     String id;
     Layer[] layers;
@@ -85,14 +86,17 @@ class Book {
         this.category = category;
     }
 
+
+
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(java.lang.Object obj) {
         if (obj instanceof Book) {
             Book book = (Book) obj;
             return book.id.equals(id);
         }
         else return super.equals(obj);
     }
+
 }
 
 enum Category {

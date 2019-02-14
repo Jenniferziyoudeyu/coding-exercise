@@ -8,9 +8,9 @@ public class ParkingLot {
         this.levels = levels;
     }
 
-    boolean park (Car car) {
+    boolean park() {
         for (int i = 0; i < levels.length; i++) {
-            if(car.levelId.equals(levels[i].id)) {
+            if(levels[i] == null) {
                 return true;
             }
         } return false;
@@ -21,33 +21,26 @@ public class ParkingLot {
 
 class Level {
     String id;
-    private ParkingSpace[] spaces;
+    ParkingSpace[] spaces;
     Level(String id, ParkingSpace[] spaces) {
         this.id = id;
         this.spaces = spaces;
     }
 
-    boolean searchASpace (Car car) {
+    ParkingSpace searchASpace(Type type) {
         for (int i = 0; i < spaces.length; i++) {
-            if (spaces[i] == null)  {
-                spaces[i].number.equals(car.parkingNumber);
-                return true;
+            if (!spaces[i].isTaken && spaces[i].type == type) {
+                return spaces[i];
             }
         }
-        return false;
+        return null;
     }
 
-    String park(Car car) {
-        if (searchASpace(car)) {
-            return car.parkingNumber;
-        }
-        return "Can't find a parking space.";
-    }
 
-    void leave(Car car) {
+    void leave(String number) {
         for (int i = 0; i < spaces.length; i++) {
-            if (car.parkingNumber.equals(spaces[i].number)) {
-                spaces[i] = null;
+            if(spaces[i].number == number) {
+                spaces[i].isTaken = false;
             }
         }
     }
@@ -55,9 +48,13 @@ class Level {
 }
 
 class ParkingSpace {
+    Type type;
+    boolean isTaken;
     String number;
-    ParkingSpace(String number) {
+    ParkingSpace(String number, Type type) {
         this.number = number;
+        this.isTaken = false;
+        this.type = type;
 
     }
 
@@ -71,8 +68,9 @@ class ParkingSpace {
     }
 }
 
-
-class Car {
-    String parkingNumber;
-    String levelId;
+enum Type {
+    compact,
+    regular
 }
+
+

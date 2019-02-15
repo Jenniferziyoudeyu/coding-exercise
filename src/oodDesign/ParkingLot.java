@@ -1,23 +1,29 @@
 package oodDesign;
 
 public class ParkingLot {
-    String id;
-    Level[] levels;
-    ParkingLot(String id, Level[] levels) {
-        this.id = id;
+    private Level[] levels;
+    ParkingLot(Level[] levels) {
         this.levels = levels;
     }
 
-//    boolean park() {
-//        for (int i = 0; i < levels.length; i++) {
-//            if(levels[i].) {
-//                return true;
-//            }
-//        } return false;
-//    }
+    String[] parking(Type type) {
+//        for (int i = 0; i < levels.length; i++) {简写：
+        for (Level level: levels) {
+            String spaceNum = level.parking(type);
+            if (spaceNum != null) {
+                //需要初始化array 需要知道车位号和层号
+                return new String[]{level.getId(),spaceNum};
+            }
+        } return null;
+    }
 
-
-
+    void leave(String levelId, String spaceId) {
+        for (Level level : levels) {
+            if (level.getId().equals(levelId)) {
+                level.leave(spaceId);
+            }
+        }
+    }
 }
 
 class Level {
@@ -32,21 +38,22 @@ class Level {
         return id;
     }
 
-    boolean parking(Type type) {
+    String parking(Type type) {
         for (int i = 0; i < spaces.length; i++) {
-            if (!spaces[i].isTaken && spaces[i].type == type) {
-                spaces[i].isTaken = true;
-                return true;
-            }
+            if (spaces[i].type == type && spaces[i].take())
+                return spaces[i].number;
+//            if (!spaces[i].isTaken() && spaces[i].type == type) {
+//                spaces[i].take();
+//                return spaces[i].number;
+//            }
         }
-        return false;
+        return null;
     }
-
 
     void leave(String number) {
         for (int i = 0; i < spaces.length; i++) {
             if(spaces[i].number.equals(number)) {
-                spaces[i].isTaken = false;
+                spaces[i].leave();
             }
         }
     }
@@ -55,13 +62,29 @@ class Level {
 
 class ParkingSpace {
     Type type;
-    boolean isTaken;
+    private boolean isTaken;
     String number;
     ParkingSpace(String number, Type type) {
         this.number = number;
         this.isTaken = false;
         this.type = type;
 
+    }
+//为了防止别人随意设置taken 我要get一下
+    public boolean isTaken() {
+        return isTaken;
+    }
+
+    boolean take() {
+        if (isTaken) return false;
+        else {
+            isTaken = true;
+            return true;
+        }
+    }
+ //相当于set isTaken
+    void leave() {
+        isTaken = false;
     }
 
     @Override

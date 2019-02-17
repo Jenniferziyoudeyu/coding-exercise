@@ -41,7 +41,7 @@ class Level {
     String parking(Type type) {
         for (int i = 0; i < spaces.length; i++) {
             if (spaces[i].type == type && spaces[i].take())
-                return spaces[i].number;
+                return spaces[i].spaceNumber;
 //            if (!spaces[i].isTaken() && spaces[i].type == type) {
 //                spaces[i].take();
 //                return spaces[i].number;
@@ -52,7 +52,7 @@ class Level {
 
     void leave(String number) {
         for (int i = 0; i < spaces.length; i++) {
-            if(spaces[i].number.equals(number)) {
+            if(spaces[i].spaceNumber.equals(number)) {
                 spaces[i].leave();
             }
         }
@@ -63,9 +63,9 @@ class Level {
 class ParkingSpace {
     Type type;
     private boolean isTaken;
-    String number;
+    String spaceNumber;
     ParkingSpace(String number, Type type) {
-        this.number = number;
+        this.spaceNumber = number;
         this.isTaken = false;
         this.type = type;
 
@@ -91,7 +91,7 @@ class ParkingSpace {
     public boolean equals(java.lang.Object obj) {
         if ( obj instanceof ParkingSpace) {
             ParkingSpace space = (ParkingSpace)obj;
-            return space.number.equals(number);
+            return space.spaceNumber.equals(spaceNumber);
         }
         else return super.equals(obj);
     }

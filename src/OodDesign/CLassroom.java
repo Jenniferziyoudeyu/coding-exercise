@@ -1,21 +1,19 @@
-package oodDesign;
+package OodDesign;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CLassroom {
-    int grade;
-    int number;
-    Obj obj;
-    Student[] students;
-    boolean isTaken;
+    private int number;
+    private Obj obj;
+    private Student[] students;
+
 
 
     CLassroom(int number, Obj obj, Student[] students) {
         this.number = number;
         this.obj = obj;
         this.students = students;
-        this.isTaken = false;
     }
 
     boolean addStudent(Student student) {
@@ -66,16 +64,38 @@ public class CLassroom {
         }
         return false;
     }
+}
 
+class Teacher {
+    private String subject;
+    private String lastName;
+    private String firstName;
+    private String phoneNumber;
+
+    Teacher(String subject, String lastName, String firstName, String phoneNumber) {
+        this.subject = subject;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+    }
+
+    String fullName() {
+        return firstName + " " + lastName;
+    }
+
+    boolean call(Student student) {
+        return !student.goToSchool;
+    }
 }
 
 class Student {
     int id;
-    String firstName;
-    String lastName;
+    private String firstName;
+    private String lastName;
     String phoneNumber;
-    Gender gender;
-    String address;
+    private Gender gender;
+    private String address;
+    boolean goToSchool;
 
     Student(int id, String firstName, String lastName, String phoneNumber, String address, Gender gender) {
         this.id = id;

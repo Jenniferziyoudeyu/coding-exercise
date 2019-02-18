@@ -1,4 +1,4 @@
-package oodDesign;
+package OodDesign;
 
 public class MyElevator {
     private String brand;

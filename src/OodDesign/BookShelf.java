@@ -1,4 +1,4 @@
-//package oodDesign;
+//package OodDesign;
 //
 //import com.sun.jdi.connect.Connector;
 //

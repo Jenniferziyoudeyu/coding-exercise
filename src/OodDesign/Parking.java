@@ -1,4 +1,4 @@
-package oodDesign;
+package OodDesign;
 
 public class Parking {
     private Level1[] levels;

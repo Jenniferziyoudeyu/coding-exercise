@@ -1,6 +1,4 @@
-package OODDesign;
-
-import com.sun.jdi.connect.Connector;
+package ood_design;
 
 public class BookShelf {
     String id;

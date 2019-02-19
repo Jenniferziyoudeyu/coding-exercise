@@ -1,4 +1,4 @@
-package OODDesign;
+package ood_design;
 
 public class Animal {
     OutwardAppearance appearance;

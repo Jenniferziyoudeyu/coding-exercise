@@ -1,4 +1,4 @@
-package OODDesign;
+package ood_design;
 
 public class CoffeeMachine {
     public int totalWater, totalMilk;

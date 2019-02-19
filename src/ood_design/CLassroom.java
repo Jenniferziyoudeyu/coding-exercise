@@ -1,15 +1,13 @@
-package OODDesign;
+package ood_design;
 
 public class CLassroom {
     private int number;
-    private Obj obj;
     private Student[] students;
 
 
 
-    CLassroom(int number, Obj obj, Student[] students) {
+    CLassroom(int number, Student[] students) {
         this.number = number;
-        this.obj = obj;
         this.students = students;
     }
 
@@ -69,11 +67,16 @@ class Teacher {
     private String firstName;
     private String phoneNumber;
 
+
     Teacher(String subject, String lastName, String firstName, String phoneNumber) {
         this.subject = subject;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     String fullName() {
@@ -101,7 +104,11 @@ class Student {
         this.phoneNumber = phoneNumber;
         this.address = address;
         this.gender = gender;
+    }
 
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     String fullName() {
@@ -120,9 +127,3 @@ enum Gender {
     female
 }
 
-enum Obj {
-    chairs,
-    desks,
-    blackboard,
-    door
-}

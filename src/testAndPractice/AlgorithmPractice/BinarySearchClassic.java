@@ -1,7 +1,7 @@
-package testAndPractice;
+package testAndPractice.AlgorithmPractice;
 
 public class BinarySearchClassic {
-    int binarySearch(int[] array, int target) {
+    public int binarySearch(int[] array, int target) {
         if (array == null || array.length == 0) return -1;
         int left = 0;
         int right = array.length - 1;

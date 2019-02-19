@@ -5,6 +5,9 @@ import class3_Queue_Stack_LinkedList.ListNodeReverse;
 import class3_Queue_Stack_LinkedList.N1PointToNn;
 import com.sun.xml.internal.bind.v2.TODO;
 import public_class.ListNode;
+import testAndPractice.AlgorithmPractice.BinarySearchClassic;
+import testAndPractice.AlgorithmPractice.LastOccurancePractice;
+import testAndPractice.AlgorithmPractice.SelectionSort;
 import testAndPractice.LinkedListReverse;
 
 import java.util.ArrayList;
@@ -13,7 +16,23 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-//        int[] array = {5,3,7,1,8,2};
+        int[] arrayTarget = {5,3,7,1,1,1,8,2};
+        int[] arrayTarget1 = {5,3,7,6,9,8,2};
+
+        BinarySearchClassic binarySearchClassic = new BinarySearchClassic();
+        int resultBR = binarySearchClassic.binarySearch(arrayTarget, 8);
+        System.out.println("resultBR : " + resultBR);
+
+        LastOccurancePractice lastOccurancePractice = new LastOccurancePractice();
+        int resultLOP = lastOccurancePractice.lastOccurance(arrayTarget, 1);
+        System.out.println("resultLOP: " + resultLOP);
+
+        SelectionSort selectionSort = new SelectionSort();
+        int[] resultArray = selectionSort.selectionSort(arrayTarget1);
+        for (int result : resultArray) {
+            System.out.println("SelectionSort array is : " + result);
+        }
+
 
 //        class1_sort.SelectionSort textCase = new class1_sort.SelectionSort();
 //        int[] thisIsReturnValue = textCase.solve(array);

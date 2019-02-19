@@ -1,4 +1,4 @@
-package OodDesign;
+package OODDesign;
 
 public class Elevetor {
     public boolean status;

@@ -1,4 +1,4 @@
-package OodDesign;
+package OODDesign;
 
 public class Elevator {
     public Status status;

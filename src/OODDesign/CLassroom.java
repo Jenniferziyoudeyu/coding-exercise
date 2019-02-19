@@ -1,7 +1,4 @@
-package OodDesign;
-
-import java.util.ArrayList;
-import java.util.List;
+package OODDesign;
 
 public class CLassroom {
     private int number;

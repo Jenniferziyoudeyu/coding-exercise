@@ -20,7 +20,7 @@ public class CLassroom {
     boolean addStudent(Student student) {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
-                student.id = i + 1;
+                student.id = students[i].id;
                 return true;
             }
         }

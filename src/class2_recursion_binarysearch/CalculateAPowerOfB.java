@@ -40,12 +40,7 @@ Time = O(n)
 每次调用自己一次
 Space = O(b）
 
- */
 
-public class CalculateAPowerOfB {
-    public int CalculateAPowerOfB (int a, int b) {
-        if (b == 0) return 1; //base case
-        /*
                            1
                           /
                          a
@@ -54,7 +49,11 @@ public class CalculateAPowerOfB {
                       /
                     a*a*a
          */
-        return CalculateAPowerOfB(a , b - 1);//一直到 b == 0停止，触底反弹，一级一级得到计算结果
+public class CalculateAPowerOfB {
+    public int CalculateAPowerOfB (int a, int b) {
+        if (b == 0) return 1; //base case
+        return a * CalculateAPowerOfB(a , b - 1);//一直到 b == 0停止，触底反弹，一级一级得到计算结果
+
         //34行可以分解成35-37行，触底反弹的过程
 //        int popupVal =  CalculateAPowerOfB(a , b - 1); // recursion rule 每次调用自己 一直到 b-1 = 0
 //        int returnVal =  a * popupVal;

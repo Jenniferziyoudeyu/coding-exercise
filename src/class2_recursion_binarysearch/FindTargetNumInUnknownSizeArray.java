@@ -17,6 +17,29 @@ import java.util.List;
  * A = {1, 2, 5, 9, 12, ......}, T = 7, return -1
  *
  */
+class FIndTarget {
+    public int FindTargetNum(Dictionary dict, int target) {
+        if (dict == null) return -1;
+        int left = 0;
+        int right = 1;
+        while (target > dict.get(right)) {
+            left = right;
+            right *= 2;
+        }
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (dict.get(mid) == target) return mid;
+            else if (dict.get(mid) > target) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
+
+    }
+
+}
 /*
 Given a sorted dictionary with unknown size, how to determine whether a word is in this dictionary or not
 在没有右边界的数组里找有没有target
@@ -67,7 +90,10 @@ public class FindTargetNumInUnknownSizeArray {
         }
         return -1;
     }
+
+
 }
+
 
 interface Dictionary {
     public Integer get(int index); // 模仿一个没有边界的array。

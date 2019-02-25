@@ -32,8 +32,6 @@ public class MinStack {
     public int peek() {
         if (stack1.isEmpty()) return -1;
         return stack1.peek();
-
-
     }
 
     public boolean isEmpty() {

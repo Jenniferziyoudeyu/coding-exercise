@@ -14,3 +14,24 @@ public class LastOccurancePractice {
         else return -1;
     }
 }
+
+
+/*
+    public static void main(String[] args) {
+        int[] arrayTarget = {5,3,7,1,1,1,8,2};
+        int[] arrayTarget1 = {5,3,7,6,9,8,2};
+
+        BinarySearchClassic binarySearchClassic = new BinarySearchClassic();
+        int resultBR = binarySearchClassic.binarySearch(arrayTarget, 8);
+        System.out.println("resultBR : " + resultBR);
+
+        LastOccurancePractice lastOccurancePractice = new LastOccurancePractice();
+        int resultLOP = lastOccurancePractice.lastOccurance(arrayTarget, 1);
+        System.out.println("resultLOP: " + resultLOP);
+
+        SelectionSort selectionSort = new SelectionSort();
+        int[] resultArray = selectionSort.selectionSort(arrayTarget1);
+        for (int result : resultArray) {
+            System.out.println("SelectionSort array is : " + result);
+        }
+ */

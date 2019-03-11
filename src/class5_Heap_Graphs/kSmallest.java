@@ -37,21 +37,36 @@ public class kSmallest {
         return result;
     }
 
+    /*
+    要点：
+    1. 找k smallest需要最大堆，这样在最上面poll出来的才是pq里面最大的数
+    2. k到array.length之间的数需要与pq.poll()作比较，不断把在pq外面更小的数换到pq里面去
+    3. 注意：传到result里面 需要按从小到大排列，而pq每次poll出来都是pq中的最大值，所以for loop要从result.length - 1开始
+     */
 
     public int[] kSmallestPQ(int[] array, int k) {
         if (array == null || k > array.length || k <= 0) return new int[0];
-        PriorityQueue<Integer> pq = new PriorityQueue<>(10,new Comparator<Integer>() {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o1 - o2;
+                //找最大堆
+                return o2 - o1;
             }
         });
-
-        for (int i = 0; i < array.length; i++) {
-            pq.add(array[i]);
+        //0-k之间 先向pq添加k个数
+        for (int i = 0; i < k; i++) {
+            pq.offer(array[i]);
+        }
+        //k-array.length之间需要比较一下，更小的再
+        for (int i = k; i < array.length; i++) {
+            if (pq.peek() > array[i]) {
+                pq.poll();
+                pq.offer(array[i]);
+            }
         }
         int[] result = new int[k];
-        for (int i = 0; i < result.length; i++) {
+        //按升序排列，result.length - 1是第一个数
+        for (int i = result.length - 1; i >= 0; i--) {
             result[i] = pq.poll();
         }
         return result;

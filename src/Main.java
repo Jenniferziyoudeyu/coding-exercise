@@ -13,14 +13,16 @@ import testAndPractice.LinkedListReverse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {3,6,7,9,2,10};
-        MinStack findMin = new MinStack();
-        int min = findMin.min(array);
-        System.out.print("Min in 3,6,7,9,2,10 is: " + min);
+        PriorityQueue<Integer> pq = new PriorityQueue<>(1);
+        pq.offer(5);
+        pq.offer(2);
+        System.out.print(pq.poll());
+
 //        int[] arrayTarget = {5,3,7,1,1,1,8,2};
 //        int[] arrayTarget1 = {5,3,7,6,9,8,2};
 //
@@ -73,23 +75,23 @@ public class Main {
 //        System.out.println(firstOccurIndex);
 
         //把输入值变成需要的input类型
-        ListNode head = new ListNode(0);
-        ListNode res = head;
-        int[] arr = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-        //把array里面的数一个一个变成ListNode
-        for (int i = 0; i < arr.length; i++) {
-            head.next = new ListNode(arr[i]);
-            head = head.next;
-        }
-        //初始化
-        LinkedListReverse reverseInstanceMemberObjct = new LinkedListReverse();
+//        ListNode head = new ListNode(0);
+//        ListNode res = head;
+//        int[] arr = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+//        //把array里面的数一个一个变成ListNode
+//        for (int i = 0; i < arr.length; i++) {
+//            head.next = new ListNode(arr[i]);
+//            head = head.next;
+//        }
+//        //初始化
+//        LinkedListReverse reverseInstanceMemberObjct = new LinkedListReverse();
 //        LinkedListReverse.QNMD(); 如果在类中是静态方法static，就可以直接类名.方法名（）；
-        //返回类型+自定义名字 = 初始化对象.方法
-        ListNode reverseResultHead = reverseInstanceMemberObjct.reverse(res.next);
-        while (reverseResultHead != null) {
-            System.out.println(reverseResultHead.value);
-            reverseResultHead = reverseResultHead.next;
-        }
+//        //返回类型+自定义名字 = 初始化对象.方法
+//        ListNode reverseResultHead = reverseInstanceMemberObjct.reverse(res.next);
+//        while (reverseResultHead != null) {
+//            System.out.println(reverseResultHead.value);
+//            reverseResultHead = reverseResultHead.next;
+//        }
 
 
 //        TODO：实现N1->Nn

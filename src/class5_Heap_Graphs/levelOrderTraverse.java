@@ -1,5 +1,6 @@
 package class5_Heap_Graphs;
 
+import javax.xml.soap.Node;
 import java.util.*;
 
 public class levelOrderTraverse {
@@ -10,7 +11,7 @@ public class levelOrderTraverse {
         queue.offer(root);
         while (!queue.isEmpty()) {
             int size = queue.size();
-            List<Integer> innerList = new ArrayList();
+            List<Integer> innerList = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode poll = queue.poll();
                 innerList.add(poll.value);
@@ -18,7 +19,6 @@ public class levelOrderTraverse {
                 if (poll.right != null) queue.offer(poll.right);
             }
             outList.add(innerList);
-
         }
         return outList;
     }

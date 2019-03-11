@@ -57,7 +57,7 @@ public class kSmallest {
         for (int i = 0; i < k; i++) {
             pq.offer(array[i]);
         }
-        //k-array.length之间需要比较一下，更小的再
+        //k-array.length之间需要比较一下，不断把pq变成array里面最小的k个数的集合
         for (int i = k; i < array.length; i++) {
             if (pq.peek() > array[i]) {
                 pq.poll();

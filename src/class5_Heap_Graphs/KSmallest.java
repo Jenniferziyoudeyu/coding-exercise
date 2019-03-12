@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class kSmallest {
+public class KSmallest {
     public int[] kSmallest(int[] array, int k) {
         //
         if (array == null || k > array.length || k <= 0) return new int[0];

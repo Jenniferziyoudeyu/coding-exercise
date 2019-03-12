@@ -3,7 +3,7 @@ package class5_Heap_Graphs;
 import javax.xml.soap.Node;
 import java.util.*;
 
-public class levelOrderTraverse {
+public class LevelOrderTraverse {
     public List<List<Integer>> leverOrderTraverse (TreeNode root) {
         List<List<Integer>> outList = new ArrayList<>();
         if (root == null) return outList;
@@ -25,31 +25,6 @@ public class levelOrderTraverse {
 
 
 
-//    public boolean isCompletTree (TreeNode root) {
-//        if (root == null) return true;
-//        boolean lastNodeHasOnlyLeftChildOrNoneChild = false;
-//        Queue<TreeNode> queue = new LinkedList<>();
-//        queue.offer(root);
-//        while (!queue.isEmpty()) {
-//            int size = queue.size();
-//            for (int i = 0; i < size; i++) {
-//                TreeNode poll = queue.poll();
-//                if (poll.left != null) {
-//                    if(lastNodeHasOnlyLeftChildOrNoneChild) return false;
-//                    queue.offer(poll.left);
-//                } else {
-//                    lastNodeHasOnlyLeftChildOrNoneChild = true;
-//                }
-//                if (poll.right != null) {
-//                    if(lastNodeHasOnlyLeftChildOrNoneChild) return false;
-//                    queue.offer(poll.right);
-//                } else {
-//                    lastNodeHasOnlyLeftChildOrNoneChild = true;
-//                }
-//            }
-//        }
-//        return true;
-//    }
 
     public int kSmallest(int[][]matrix, int k) {
         int m = matrix.length, n = matrix[0].length;

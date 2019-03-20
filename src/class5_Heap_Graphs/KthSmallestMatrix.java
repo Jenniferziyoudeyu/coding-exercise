@@ -10,6 +10,7 @@ public class KthSmallestMatrix {
 
         PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
             @Override
+            //o1 - o2是最小堆
             public int compare(int[] o1, int[] o2) {
                 return matrix[o1[0]][o1[1]] - matrix[o2[0]][o2[1]];
             }
@@ -39,8 +40,11 @@ public class KthSmallestMatrix {
 
 
         //返回值应该是k smallest的数的数组
-        //pq.peek()是最小值的坐标
+        //pq.peek()是最小值的坐标，e.g. peek = {5,2}: pq.peek()[0] = 5, pq.peek()[1] = 2
+        //之前的数都不断poll出去 一共k次，所以现在pq.poll是当前pq最小的，是在整个matrix中第k小的
         return matrix[pq.peek()[0]][pq.peek()[1]];
+
+
     }
 
 }

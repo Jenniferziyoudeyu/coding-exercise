@@ -3,6 +3,7 @@ import class2_recursion_binarysearch.FindClosestKElement;
 import class2_recursion_binarysearch.FindFirstOccurrenceIndex;
 import class3_Queue_Stack_LinkedList.ListNodeReverse;
 import class3_Queue_Stack_LinkedList.N1PointToNn;
+import class_6_DFS.PrintAllSubsets;
 import com.sun.xml.internal.bind.v2.TODO;
 import public_class.ListNode;
 import testAndPractice.AlgorithmPractice.BinarySearchClassic;
@@ -18,10 +19,8 @@ import java.util.PriorityQueue;
 public class Main {
 
     public static void main(String[] args) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(1);
-        pq.offer(5);
-        pq.offer(2);
-        System.out.print(pq.poll());
+
+
 
 //        int[] arrayTarget = {5,3,7,1,1,1,8,2};
 //        int[] arrayTarget1 = {5,3,7,6,9,8,2};

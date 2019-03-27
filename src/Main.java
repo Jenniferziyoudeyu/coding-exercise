@@ -3,17 +3,42 @@ import class2_recursion_binarysearch.FindClosestKElement;
 import class2_recursion_binarysearch.FindFirstOccurrenceIndex;
 import class3_Queue_Stack_LinkedList.ListNodeReverse;
 import class3_Queue_Stack_LinkedList.N1PointToNn;
+import class_6_DFS.PrintAllSubsets;
 import com.sun.xml.internal.bind.v2.TODO;
 import public_class.ListNode;
+import testAndPractice.AlgorithmPractice.BinarySearchClassic;
+import testAndPractice.AlgorithmPractice.LastOccurancePractice;
+import testAndPractice.AlgorithmPractice.MinStack;
+import testAndPractice.AlgorithmPractice.SelectionSort;
 import testAndPractice.LinkedListReverse;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 public class Main {
 
     public static void main(String[] args) {
-//        int[] array = {5,3,7,1,8,2};
+
+
+
+//        int[] arrayTarget = {5,3,7,1,1,1,8,2};
+//        int[] arrayTarget1 = {5,3,7,6,9,8,2};
+//
+//        BinarySearchClassic binarySearchClassic = new BinarySearchClassic();
+//        int resultBR = binarySearchClassic.binarySearch(arrayTarget, 8);
+//        System.out.println("resultBR : " + resultBR);
+//
+//        LastOccurancePractice lastOccurancePractice = new LastOccurancePractice();
+//        int resultLOP = lastOccurancePractice.lastOccurance(arrayTarget, 1);
+//        System.out.println("resultLOP: " + resultLOP);
+//
+//        SelectionSort selectionSort = new SelectionSort();
+//        int[] resultArray = selectionSort.selectionSort(arrayTarget1);
+//        for (int result : resultArray) {
+//            System.out.println("SelectionSort array is : " + result);
+//        }
+
 
 //        class1_sort.SelectionSort textCase = new class1_sort.SelectionSort();
 //        int[] thisIsReturnValue = textCase.solve(array);
@@ -49,23 +74,23 @@ public class Main {
 //        System.out.println(firstOccurIndex);
 
         //把输入值变成需要的input类型
-        ListNode head = new ListNode(0);
-        ListNode res = head;
-        int[] arr = {0,1,2,3,4,5,6,7,8,9,10,11,12};
-        //把array里面的数一个一个变成ListNode
-        for (int i = 0; i < arr.length; i++) {
-            head.next = new ListNode(arr[i]);
-            head = head.next;
-        }
-        //初始化
-        LinkedListReverse reverseInstanceMemberObjct = new LinkedListReverse();
+//        ListNode head = new ListNode(0);
+//        ListNode res = head;
+//        int[] arr = {0,1,2,3,4,5,6,7,8,9,10,11,12};
+//        //把array里面的数一个一个变成ListNode
+//        for (int i = 0; i < arr.length; i++) {
+//            head.next = new ListNode(arr[i]);
+//            head = head.next;
+//        }
+//        //初始化
+//        LinkedListReverse reverseInstanceMemberObjct = new LinkedListReverse();
 //        LinkedListReverse.QNMD(); 如果在类中是静态方法static，就可以直接类名.方法名（）；
-        //返回类型+自定义名字 = 初始化对象.方法
-        ListNode reverseResultHead = reverseInstanceMemberObjct.reverse(res.next);
-        while (reverseResultHead != null) {
-            System.out.println(reverseResultHead.value);
-            reverseResultHead = reverseResultHead.next;
-        }
+//        //返回类型+自定义名字 = 初始化对象.方法
+//        ListNode reverseResultHead = reverseInstanceMemberObjct.reverse(res.next);
+//        while (reverseResultHead != null) {
+//            System.out.println(reverseResultHead.value);
+//            reverseResultHead = reverseResultHead.next;
+//        }
 
 
 //        TODO：实现N1->Nn

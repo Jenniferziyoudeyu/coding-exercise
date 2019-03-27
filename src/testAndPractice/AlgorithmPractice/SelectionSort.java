@@ -1,7 +1,7 @@
-package testAndPractice;
+package testAndPractice.AlgorithmPractice;
 
 public class SelectionSort {
-    int[] selectionSort(int[] array) {
+    public int[] selectionSort(int[] array) {
         if (array == null || array.length == 0) return null;
         for (int i = 0; i < array.length; i++) {
             int min = Integer.MAX_VALUE;
@@ -12,11 +12,14 @@ public class SelectionSort {
                     minIndex = j;
                }
             }
-            int temp = min;
-            min = array[i];
-            array[i] = temp;
+            swap(array, i, minIndex);
         }
         return array;
 
+    }
+    void swap(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
     }
 }
